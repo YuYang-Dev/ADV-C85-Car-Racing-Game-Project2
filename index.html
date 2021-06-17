@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-position: center;
+    background-size: cover;
+}
+#myCanvas
+{
+	border-width:10px;
+	border-style:ridge;
+}
+
+#ASCIIValueTeller
+{
+	padding-top: 70px;
+}
+#ASCIIValueTellerTitle
+{
+	font-size: 30px;
+}
+#ASCIIValue
+{
+	padding-top: 15px;
+	font-size:22px;
+}
+#RaceWinner
+{
+	font-size: 21px;
+}
+#RaceButton
+{
+	width: 250px;
+	height: 50px;
+}
+#ColourSelection
+{
+	font-size: 25px;
+	padding-bottom: 30px;
+}
+#SetColor
+{
+	font-size: 18px;
+	width: 200px;
+	height: 45px;
+}
+</style>		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<title>Racing Cars</title>
+</head>
+<body onload="add();">
+<center id="Center">
+<p id="BackgroundThemeInstructions">Select your background theme: </p>
+<select id="ThemeSelection" name="ThemeSelection">
+	<option class="ThemeOption" value="Light">Light</option>
+	<option class="ThemeOption" value="Dark">Dark</option>
+</select>
+<button onclick="ChangeTheme()">Change Theme</button>
+<h1 id="h1">Game:</h1>
+<canvas id="myCanvas" width="800" height="600">
+</canvas>
+<p id="Controls">Controls: Blue car: Arrow Keys
+	Red Car: W A S D.	
+	Press R to race the cars or tap the button below to start it. :D.
+</p>
+<button id="RaceButton" onclick="RaceCars()">Start The Race</button>
+<p id="RaceWinner">The winner of the race is</p>
+<br>
+<h4>
+	<b class="text-danger">NOTE : </b> <p id="Warning">IF CARS ARE NOT VISIBLE PRESS ANY ARROW KEY</p>
+</h4>
+
+<p id="ChooseColourSelection">Choose the color of your cars!</p>
+<div id="ColourSelection">
+	<p id="Car1ColorSelection">Car 1: </p>
+	<select name="Car Colors1" id="Car1ColorSelect">
+			<option value="Blue1" class="CarColor1">Blue</option>
+			<option value="Red1" class="CarColor1">Red</option>
+			<option value="Green1" class="CarColor1">Green</option>
+			<option value="Yellow1" class="CarColor1">Yellow</option>
+			<option value="Orange1" class="CarColor1">Orange</option>
+			<option value="Purple1" class="CarColor1">Purple</option>
+		</div>
+	</select>
+
+	<p id="Car2ColorSelection">Car 2: </p>
+	<select name="Car Colors2" id="Car2ColorSelect">
+		<option value="Red2">Red</option>
+		<option value="Blue2">Blue</option>
+		<option value="Green2">Green</option>
+		<option value="Yellow2">Yellow</option>
+		<option value="Orange2">Orange</option>
+		<option value="Purple2">Purple</option>
+	</select>
+</div>
+
+<button id="SetColor" onclick="SetCarColors()">Set Colours</button>
+
+<section id="ASCIIValueTeller">
+	<p id="ASCIIValueTellerTitle">ASCII value teller</p> 
+	because i keep forgetting the values.
+	<p id="ASCIIValue">The value of the key is </p>
+</section>
+
+</center>
+<script src="main.js">
+</script>
+</body>
+</html>
